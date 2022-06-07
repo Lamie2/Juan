@@ -20,7 +20,7 @@ namespace Juan
             services.AddControllersWithViews();
             services.AddDbContext<AppDbContext>(options =>
             {
-                options.UseSqlServer("Server=DESKTOP-2VCD5FN;Database=Juan;Trusted_Connection=TRUE");
+                options.UseSqlServer("Server=CAPR10;Database=Juan;Trusted_Connection=TRUE");
             });
 
         }
@@ -42,7 +42,7 @@ namespace Juan
                 );
 
                 endpoints.MapControllerRoute(
-                    "areas",
+                    "default",
                     "{controller=home}/{action=index}/{id?}");
             });
         }

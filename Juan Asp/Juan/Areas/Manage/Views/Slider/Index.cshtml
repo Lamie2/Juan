@@ -1,7 +1,47 @@
-﻿
+﻿@model List<Slider>
+
 @{
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
 
+<section class="hero-table">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10 mx-auto">
+                <a asp-action="create" class="btn btn-primary">Create</a>
+            </div>
+            <div class="col-md-12 mx-auto">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Image</th>
+                            <th scope="col">Subtitle</th>
+                            <th scope="col">Title</th>
+                            <th scope="col">Description</th>
+                            <th scope="col">Edit</th>
+                            <th scope="col">Delete</th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        @foreach (var slider in Model)
+                        {
+
+                            <tr>
+                                <td>@slider.Image</td>
+                                <td>@slider.Title1</td>
+                                <td>@slider.Title2</td>
+                                <td>@slider.Desc</td>
+                                <td><button type="button" class="btn btn-warning">Edit</button></td>
+                                <td><button type="button" class="btn btn-danger">Delete</button></td>
+
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>

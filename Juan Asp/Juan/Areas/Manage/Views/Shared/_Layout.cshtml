@@ -1,4 +1,7 @@
-﻿<!DOCTYPE html>
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@addTagHelper *, AuthoringTagHelpers
+
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -59,7 +62,7 @@
 
             <!-- Nav Item - Tables -->
             <li class="nav-item">
-                <a class="nav-link" href="tables.html">
+                <a class="nav-link" asp-action="index" asp-controller="slider">
                     <i class="fas fa-fw fa-table"></i>
                     <span>Slider</span>
                 </a>
@@ -304,7 +307,7 @@
 
                 </nav>
                 <!-- End of Topbar -->
-               
+
                 @RenderBody();
             </div>
             <!-- End of Main Content -->
